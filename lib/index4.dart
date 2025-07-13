@@ -1,13 +1,17 @@
 import 'package:big_projek/bab/bab1.dart';
+import 'package:big_projek/bab/bab2.dart';
+import 'package:big_projek/bab/bab3.dart';
+import 'package:big_projek/bab/bab4.dart';
+import 'package:big_projek/bab/bab5.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const HalamanIndex());
+  runApp(const Index4());
 }
 
-class HalamanIndex extends StatelessWidget {
-  const HalamanIndex({super.key});
+class Index4 extends StatelessWidget {
+  const Index4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +94,7 @@ class HalamanIndex extends StatelessWidget {
                         children: [
                           Icon(Icons.star, color: Colors.white),
                           Text(
-                            "0",
+                            "5",
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -118,7 +122,7 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Bab1(),
+                                builder: (context) => const Bab1LimaDone(),
                               ),
                             );
                           },
@@ -194,7 +198,7 @@ class HalamanIndex extends StatelessWidget {
                         children: [
                           Icon(Icons.star, color: Colors.white),
                           Text(
-                            "0",
+                            "5",
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -222,7 +226,7 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab2LimaDone(),
                               ),
                             );
                           },
@@ -298,7 +302,7 @@ class HalamanIndex extends StatelessWidget {
                         children: [
                           Icon(Icons.star, color: Colors.white),
                           Text(
-                            "0",
+                            "5",
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -326,7 +330,7 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab3LimaDone(),
                               ),
                             );
                           },
@@ -402,7 +406,7 @@ class HalamanIndex extends StatelessWidget {
                         children: [
                           Icon(Icons.star, color: Colors.white),
                           Text(
-                            "0",
+                            "5",
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -430,7 +434,7 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab4LimaDone(),
                               ),
                             );
                           },
@@ -534,7 +538,7 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab5(),
                               ),
                             );
                           },
