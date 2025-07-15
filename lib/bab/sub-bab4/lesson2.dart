@@ -1,4 +1,3 @@
-import 'package:big_projek/bab/bab4.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -67,9 +66,7 @@ class Bab4Dua extends StatelessWidget {
                 },
                 children: [
                   TableRow(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 197, 211),
-                    ),
+                    decoration: BoxDecoration(color: Colors.blue),
                     children: [
                       Padding(
                         padding: EdgeInsets.all(8),
@@ -249,15 +246,10 @@ class Bab4Dua extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Bab4DuaDone(),
-                      ),
-                    );
+                    Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 0, 197, 211),
+                    backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),

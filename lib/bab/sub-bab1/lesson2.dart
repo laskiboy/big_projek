@@ -1,4 +1,3 @@
-import 'package:big_projek/bab/bab1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -247,10 +246,7 @@ class Bab1Dua extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Bab1DuaDone()),
-                    );
+                    Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFD35400),

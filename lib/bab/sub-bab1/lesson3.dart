@@ -1,4 +1,3 @@
-import 'package:big_projek/bab/bab1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -247,11 +246,9 @@ class Bab1Tiga extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pop(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const Bab1TigaDone(),
-                      ),
+                      true,
                     );
                   },
                   style: ElevatedButton.styleFrom(

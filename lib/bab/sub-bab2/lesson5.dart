@@ -1,4 +1,3 @@
-import 'package:big_projek/bab/bab2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,7 +67,7 @@ class Bab2Lima extends StatelessWidget {
                 children: [
                   TableRow(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 202, 202, 1),
+                      color: Colors.green
                     ),
                     children: [
                       Padding(
@@ -249,15 +248,10 @@ class Bab2Lima extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Bab2LimaDone(),
-                      ),
-                    );
+                    Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 202, 202, 1),
+                    backgroundColor: Colors.green,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),

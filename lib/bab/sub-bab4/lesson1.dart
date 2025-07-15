@@ -1,4 +1,3 @@
-import 'package:big_projek/bab/bab4.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,7 +67,7 @@ class Bab4Satu extends StatelessWidget {
                 children: [
                   TableRow(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 0, 197, 211),
+                      color: Colors.blue,
                     ),
                     children: [
                       Padding(
@@ -249,15 +248,10 @@ class Bab4Satu extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Bab4SatuDone(),
-                      ),
-                    );
+                    Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 0, 197, 211),
+                    backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),

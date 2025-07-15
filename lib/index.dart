@@ -1,4 +1,8 @@
 import 'package:big_projek/bab/bab1.dart';
+import 'package:big_projek/bab/bab2.dart';
+import 'package:big_projek/bab/bab3.dart';
+import 'package:big_projek/bab/bab4.dart';
+import 'package:big_projek/bab/bab5.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -148,7 +152,7 @@ class HalamanIndex extends StatelessWidget {
               child: Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 202, 202, 1),
+                  color: Colors.green,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -222,13 +226,13 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab2(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: Color.fromARGB(255, 202, 202, 1),
+                            foregroundColor: Colors.green,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
@@ -252,7 +256,7 @@ class HalamanIndex extends StatelessWidget {
               child: Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 1, 182, 7),
+                  color: Colors.teal,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -326,13 +330,13 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab3(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: Color.fromARGB(255, 1, 182, 7),
+                            foregroundColor: Colors.teal,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
@@ -356,7 +360,7 @@ class HalamanIndex extends StatelessWidget {
               child: Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 0, 197, 211),
+                  color: Colors.blue,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -430,13 +434,13 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab4(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: Color.fromARGB(255, 0, 197, 211),
+                            foregroundColor: Colors.blue,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
@@ -460,7 +464,7 @@ class HalamanIndex extends StatelessWidget {
               child: Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 4, 0, 211),
+                  color: Colors.purple,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -534,13 +538,13 @@ class HalamanIndex extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HalamanIndex(),
+                                builder: (context) => const Bab5(),
                               ),
                             );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: Color.fromARGB(255, 4, 0, 211),
+                            foregroundColor: Colors.purple,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
