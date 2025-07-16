@@ -54,181 +54,205 @@ class _Bab5State extends State<Bab5> {
   List<bool> isCompleted = List.generate(5, (_) => false);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "ExcelLearn",
-            style: GoogleFonts.poppins(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-              color: Colors.black,
-            ),
-          ],
-          backgroundColor: Colors.white,
-          elevation: 0,
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(1.0),
-            child: Container(color: Colors.grey.shade400, height: 1.0),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "ExcelLearn",
+          style: GoogleFonts.poppins(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.more_vert),
+            color: Colors.black,
+          ),
+        ],
+        backgroundColor: Colors.white,
+        elevation: 0,
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: Container(color: Colors.grey.shade400, height: 1.0),
+        ),
+      ),
 
-        body: ListView.builder(
-          itemCount: subLessons.length + 2,
-          itemBuilder: (context, index) {
-            if (index == 0) {
-              return Padding(
-                padding: EdgeInsets.only(top: 25, left: 25, right: 25),
-                child: Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.purple,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 30,
-                                bottom: 10,
-                              ),
-                              child: Text(
-                                "Lesson 5: Use English in Real Life",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
+      body: ListView.builder(
+        itemCount: subLessons.length + 3,
+        itemBuilder: (context, index) {
+          if (index == 0) {
+            return Padding(
+              padding: EdgeInsets.only(top: 25, left: 25, right: 25),
+              child: Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Colors.purple,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 30,
+                              bottom: 10,
+                            ),
+                            child: Text(
+                              "Lesson 5: Use English in Real Life",
+                              style: GoogleFonts.poppins(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 30, top: 10),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      "${isCompleted.where((s) => s).length}",
-                                      style: GoogleFonts.poppins(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 30, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "${isCompleted.where((s) => s).length}",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "/${isCompleted.length}",
-                                      style: GoogleFonts.poppins(
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                      ),
+                                  ),
+                                  Text(
+                                    "/${isCompleted.length}",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 16,
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Image.asset(
-                          "assets/bab5.webp",
-                          width: 80,
-                          height: 80,
-                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Image.asset(
+                        "assets/bab5.webp",
+                        width: 80,
+                        height: 80,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              );
-            } else if (index == 1) {
-              return Padding(
-                padding: const EdgeInsets.all(30),
-                child: Text(
-                  "Our Lessons",
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
+              ),
+            );
+          } else if (index == 1) {
+            return Padding(
+              padding: const EdgeInsets.all(30),
+              child: Text(
+                "Our Lessons",
+                style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 ),
-              );
-            } else {
-              final lessonIndex = index - 2;
-              final lesson = subLessons[lessonIndex];
-              return Padding(
-                padding: const EdgeInsets.only(left: 30, bottom: 30),
-                child: InkWell(
-                  onTap: () async {
-                    final result = await Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => lesson['page']),
-                    );
-
-                    if (result == true) {
-                      setState(() {
-                        isCompleted[lessonIndex] = true;
-                      });
-                    }
+              ),
+            );
+          } else if (index == subLessons.length + 2) {
+            return Padding(
+              padding: const EdgeInsets.only(top: 30, left: 40, right: 30),
+              child: SizedBox(
+                width: 300,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context, isCompleted);
                   },
-                  child: Row(
-                    children: [
-                      Container(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    foregroundColor: const Color(0xFFD35400),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: Text(
+                    'Mulai Lesson!',
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            );
+          } else {
+            final lessonIndex = index - 2;
+            final lesson = subLessons[lessonIndex];
+            return Padding(
+              padding: const EdgeInsets.only(left: 30, bottom: 30),
+              child: InkWell(
+                onTap: () async {
+                  final result = await Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => lesson['page']),
+                  );
+
+                  if (result == true) {
+                    setState(() {
+                      isCompleted[lessonIndex] = true;
+                    });
+                  }
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: isCompleted[lessonIndex]
+                            ? lesson['color']
+                            : Colors.grey.shade200,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Container(
                         padding: EdgeInsets.all(6),
                         decoration: BoxDecoration(
-                          color: isCompleted[lessonIndex]
-                              ? lesson['color']
-                              : Colors.grey.shade200,
+                          color: Colors.white,
                           shape: BoxShape.circle,
                         ),
                         child: Container(
-                          padding: EdgeInsets.all(6),
+                          padding: EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: lesson['color'],
                             shape: BoxShape.circle,
                           ),
-                          child: Container(
-                            padding: EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              color: lesson['color'],
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              lesson['icon'],
-                              color: Colors.white,
-                              size: 24,
-                            ),
+                          child: Icon(
+                            lesson['icon'],
+                            color: Colors.white,
+                            size: 24,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20),
-                        child: Text(
-                          lesson['title'],
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: Text(
+                        lesson['title'],
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              );
-            }
-          },
-        ),
+              ),
+            );
+          }
+        },
       ),
     );
   }

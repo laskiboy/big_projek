@@ -56,9 +56,7 @@ class _Bab1State extends State<Bab1> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text(
@@ -83,7 +81,7 @@ class _Bab1State extends State<Bab1> {
           ),
         ),
         body: ListView.builder(
-          itemCount: subLessons.length + 2, // 1 for card, 1 for title
+          itemCount: subLessons.length + 3,
           itemBuilder: (context, index) {
             if (index == 0) {
               return Padding(
@@ -166,6 +164,33 @@ class _Bab1State extends State<Bab1> {
                   ),
                 ),
               );
+            } else if (index == subLessons.length + 2) {
+              return Padding(
+                padding: const EdgeInsets.only(top: 30, left: 40, right: 30),
+                child: SizedBox(
+                  width: 300,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context, isCompleted);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: const Color(0xFFD35400),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text(
+                      'Mulai Lesson!',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              );
             } else {
               final lessonIndex = index - 2;
               final lesson = subLessons[lessonIndex];
@@ -232,8 +257,7 @@ class _Bab1State extends State<Bab1> {
             }
           },
         ),
-      ),
-    );
+      );
   }
 }
 
